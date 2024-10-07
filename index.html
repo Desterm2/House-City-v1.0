@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Imóveis Online - House-City</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #0056b3;
+            color: white;
+            padding: 20px 0;
+            text-align: center;}
+        
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        section {
+            padding: 20px 0;
+        }
+        h2 {
+            color: #0056b3;
+        }
+        .button-whatsapp {
+            background-color: #25D366;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #0056b3;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 40px;
+        }
+        /* Animação de rolagem suave */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+          <h1>House-City</h1>  
+            <p>Sua plataforma online de imóveis</p>
+        </div>
+       
+    </header>
+
+    <section class="container">
+        <h2>Encontre o imóvel dos seus sonhos de forma fácil e rápida!</h2>
+        <p>Na House-City conectamos você ao seu imóvel ideal em poucos cliques. Seja para comprar, vender ou alugar, temos as melhores opções de casas, apartamentos e imóveis comerciais para atender às suas necessidades.</p>
+
+        <h2>Nossos serviços</h2>
+        <ul>
+            <li>Venda de imóveis residenciais e comerciais.</li>
+            <li>Aluguel de imóveis por temporada ou de longa duração.</li>
+            <li>Consultoria especializada para compra e venda de imóveis.</li>
+            <li>Avaliação de imóveis.</li>
+        </ul>
+
+        <h2>Por que escolher a House-City?</h2>
+        <ul>
+            <li><strong>Variedade:</strong> Ampla gama de imóveis disponíveis em diferentes regiões.</li>
+            <li><strong>Praticidade:</strong> Pesquisa rápida e intuitiva por tipo de imóvel, localização e preço.</li>
+            <li><strong>Segurança:</strong> Equipe qualificada para garantir transações seguras.</li>
+            <li><strong>Atendimento personalizado:</strong> Estamos aqui para entender suas necessidades e encontrar a melhor solução.</li>
+        </ul>
+
+        <h2>Imóveis em destaque</h2>
+        <ul>
+            <li>Apartamento à venda em Quedas do Iguaçu</li>
+            <li>Casas dispoiveis em todos os bairros</li>
+            <li>Terreno comercial em Quedas e região</li>
+        </ul>
+
+        <h2>Entre em contato agora mesmo!</h2>
+        <p>Estamos à disposição para ajudar você a encontrar o imóvel perfeito. Fale com um de nossos especialistas pelo WhatsApp e tire suas dúvidas.</p>
+        <a href="#" id="whatsapp-button" class="button-whatsapp">Clique aqui para falar com a gente!</a>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 House-City - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Função para validar o número de telefone e redirecionar para o WhatsApp
+        document.getElementById('whatsapp-button').addEventListener('click', function(event) {
+            event.preventDefault();
+            
+            // Definir o número de telefone com código do país e DDD
+            var telefone = '5546999115477'; // Substitua pelo seu número
+            // Alerta para confirmar o redirecionamento
+            if(confirm("Deseja falar com um de nossos especialistas pelo WhatsApp?")) {
+                // Redirecionar para o WhatsApp
+                window.location.href = 'https://api.whatsapp.com/send?phone=' + telefone;
+            }
+        });
+
+        // Função para animação suave de rolagem (para links internos, se houver)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
